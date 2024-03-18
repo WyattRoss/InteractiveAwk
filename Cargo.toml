@@ -5,3 +5,4 @@ edition = "2021"
 
 [dependencies]
 cursive = "0.20.0"
+termsize = "0.1.6"

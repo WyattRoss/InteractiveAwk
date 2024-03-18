@@ -27,7 +27,8 @@ impl OutputGenerator {
             .unwrap()
             .wait_with_output()
             .unwrap();
-        // Stderr and Stdout should never both be empty
+
+        // Stderr and Stdout should never both be empty (or both full)
         if awk.stderr.is_empty() {
             String::from_utf8_lossy(&awk.stdout).to_string()
         } else {
